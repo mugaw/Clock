@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock, Stopwatch, and Timer</title>
+    <link rel="icon" href="Webp.net-resizeimage.gif" type="image/gif">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clock, Stopwatch, and Timer</h1>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="clock">Clock</button>
+            <button class="tab-button" data-tab="stopwatch">Stopwatch</button>
+            <button class="tab-button" data-tab="timer">Timer</button>
+        </div>
+        <div class="tab-content">
+            <div id="clock" class="tab-pane active">
+                <div class="clock-container">
+                    <div class="analog-clock" style="display: none;">
+                        <div class="hand hour-hand"></div>
+                        <div class="hand minute-hand"></div>
+                        <div class="hand second-hand"></div>
+                        <div class="center-point"></div>
+                    </div>
+                    <div class="digital-clock" style="display: none;">00:00:00</div>
+                </div>
+                <div class="controls">
+                    <div class="clock-type-selector">
+                        <label for="clock-type">Clock Type:</label>
+                        <select id="clock-type">
+                            <option value="analog">Analog</option>
+                            <option value="digital">Digital</option>
+                        </select>
+                    </div>
+                    <div class="time-format-selector">
+                        <label for="time-format">Time Format:</label>
+                        <select id="time-format">
+                            <option value="24">24-hour</option>
+                            <option value="12">12-hour</option>
+                        </select>
+                    </div>
+                    <div class="timezone-selector">
+                        <label for="timezone">Time Zone:</label>
+                        <select id="timezone"></select>
+                    </div>
+                </div>
+            </div>
+            <div id="stopwatch" class="tab-pane">
+                <div class="stopwatch-display">00:00:00.000</div>
+                <div class="controls">
+                    <button id="startStopwatch">Start</button>
+                    <button id="pauseStopwatch">Pause</button>
+                    <button id="resetStopwatch">Reset</button>
+                </div>
+            </div>
+            <div id="timer" class="tab-pane">
+                <div class="timer-display">00:00:00</div>
+                <div class="controls">
+                    <input type="number" id="hours" min="0" max="23" placeholder="HH">
+                    <input type="number" id="minutes" min="0" max="59" placeholder="MM">
+                    <input type="number" id="seconds" min="0" max="59" placeholder="SS">
+                    <button id="startTimer">Start</button>
+                    <button id="pauseTimer">Pause</button>
+                    <button id="resetTimer">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyrights Reserved to the Creator Muhammad Gawad ©.</p>
+        <p>Made with <span class="heart">❤</span></p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
